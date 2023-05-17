@@ -1,0 +1,13 @@
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-menu{
+    display: flex;
+    gap:1.25em;
+}
+nav a{
+    color: red;
+    font-size: 600;
+}

@@ -1,0 +1,11 @@
+.hero{
+    margin-top:2em;
+}
+
+.container-hero{
+    display: flex;
+    padding: 1em 0px;
+}
+.left, .right{
+    flex:1
+}

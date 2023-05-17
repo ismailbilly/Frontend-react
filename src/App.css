@@ -1,13 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Clicker+Script&family=Poppins:wght@200;300;400;500;600&display=swap');
+
 *{
   margin:0;
   padding: 0;
   box-sizing: border-box;
+}
+body{
+  font-family: 'Poppins', sans-serif;
 }
 .coker{
   max-width: 900px;
   border: 2px solid red;
   margin:auto;
   padding: 10px 30px;
+}
+a{
+  text-decoration: none;
+}
+li{
+  list-style-type: none;
+}
+button{
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background: rgb(232, 167, 167);
 }
 /* #root {
   max-width: 1280px;
