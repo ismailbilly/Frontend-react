@@ -27,6 +27,11 @@ button{
   border-radius: 20px;
   background: rgb(232, 167, 167);
 }
+.flex-card{
+  display: flex;
+  justify-content: center;
+  gap:1.5rem
+}
 /* #root {
   max-width: 1280px;
   margin: 0 auto;

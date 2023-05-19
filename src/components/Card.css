@@ -1,0 +1,17 @@
+.pizza-img{
+
+    object-fit: cover;
+}
+.card-img{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+.card-content{
+    margin:0;
+    padding:0 1rem;
+    text-align: center;
+}
+.card-text{
+    margin: 0;
+}

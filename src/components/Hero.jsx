@@ -2,11 +2,12 @@ import HeroLeft from "./HeroLeft"
 import HeroRight from "./HeroRight"
 import './Hero.css'
 
-const Hero = () => {
+const Hero = (props) => {
   return (
     <section className="hero">
         <div className="container-hero">
-
+       
+    
           <HeroLeft />
       
           <HeroRight/>
@@ -17,3 +18,9 @@ const Hero = () => {
 }
 
 export default Hero
+
+
+// function OurName(name){
+//   console.log(name)
+// }
+// OurName('Sulaiman')
