@@ -1,0 +1,55 @@
+#https://www.uplabs.com/posts/food-landing-page-design-template
+
+# What is React?
+React is a javascript library for building easily maintainable UI.
+It lets you compose UI from small and isolated and isolated pieces of code
+
+# Why React and not pure Javascript?
+Flexibility
+Compared to other frontend frameworks, the React code is easier to maintain and is flexible due to its modular structure.
+This flexibility, in turn, saves a huge amount of time and cost to businesses.
+
+Performance
+React JS was designed to provide high performance in mind. 
+The core of the framework offers a virtual DOM program and server-side rendering,
+which makes complex apps run extremely fast.
+
+Reusable Components
+One of the main benefits of using React JS is its potential to reuse components.
+It saves time for developers 
+
+# What does Single Page Application mean?
+A single-page application is a web application that loads once and dynamically
+updates its content without requiring full page reloads
+React's component-based architecture and virtual DOM (Document Object Model) make 
+it well-suited for building SPAs.
+
+# Do browsers understand JSX?
+Browsers do not understand JSX, to make the code work in the browser we need to pass it
+through a JS compiler called Babel. Let's head to https://babeljs.io/repl and type the fwg code
+const myFirstCode = <h1>Hello World! </h1>
+
+# render method
+Renders an element from the virtual DOM in the browser DOM
+
+# What is virtual DOM and browser DOM
+Virtual DOM is the react DOM which is a lightweight DOM kept in memory 
+and it is the exact copy of the browser DOM. When the state or data changes in a React component,
+React re-renders the virtual DOM tree, it then compares  the previous virtual DOM with the new one. 
+It efficiently identifies the minimal set of changes required to update the actual DOM.
+React then applies those changes to the real DOM. This process is known as reconciliation.
+
+# Always put a parenthesis after the return keyword in functional components
+ and write JSX between the opening and closing parenthesis
+
+# Always wrap all JSX in a container element or react fragment 
+
+# XML does not allow self-closing elements, we need to close all elements e.g input element
+
+# A parent component renders the child component e.g App renders greeting component
+
+# Today we will talk about
+Passing objects as props
+Passing array as props
+Passing function as props
+Children Prop

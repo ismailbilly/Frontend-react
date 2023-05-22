@@ -2,11 +2,11 @@ import HeroLeft from "./HeroLeft"
 import HeroRight from "./HeroRight"
 import './Hero.css'
 
-const Hero = (props) => {
+const Hero = () => {
   return (
     <section className="hero">
         <div className="container-hero">
-       
+        
     
           <HeroLeft />
       

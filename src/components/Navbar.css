@@ -1,13 +1,29 @@
 nav{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
+    height: 70px;
+    background-color: rgb(248, 50, 248);
+    color: white;
 }
 .nav-menu{
     display: flex;
     gap:1.25em;
 }
 nav a{
-    color: red;
+    color: white;
     font-size: 600;
+}
+#cart-no{
+    position: absolute;
+    bottom: 17px;
+    left: 15px;
+    width: 1.75rem;
+    height: 1.75rem;
+    
+    background-color: rgb(72, 66, 66);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

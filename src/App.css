@@ -8,12 +8,12 @@
 body{
   font-family: 'Poppins', sans-serif;
 }
-.coker{
+/* .coker{
   max-width: 900px;
   border: 2px solid red;
   margin:auto;
   padding: 10px 30px;
-}
+} */
 a{
   text-decoration: none;
 }
@@ -24,8 +24,10 @@ button{
   border: none;
   outline: none;
   padding: 10px 20px;
-  border-radius: 20px;
-  background: rgb(232, 167, 167);
+  border-radius: 7px;
+  margin-right: 10px;
+  background: rgb(245, 39, 114);
+  color: white;
 }
 .flex-card{
   display: flex;
