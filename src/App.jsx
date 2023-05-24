@@ -9,6 +9,8 @@ import pizza8 from './assets/pizza-8.jpg'
 import pizza7 from './assets/pizza-7.jpg'
 import './App.css'
 import Button from './components/Button';
+import Form from './components/Form';
+import ObjectState from './components/ObjectState';
 
 // let btnStyle={
 //   borderRadius:8,
@@ -39,8 +41,11 @@ function App() {
   return (
     
     <div className='coker'>
-      <Navbar  cartCount = {count} />
-      <Button count = {count} setCount={setCount}/>
+       <Navbar  cartCount = {count} />
+      <Form/>
+     
+      
+      {/* <Button count = {count} setCount={setCount}/> */}
       {/* <Button /> */}
       {/* <Button>Sakeena</Button>
       <Button>Alabi</Button> */}
