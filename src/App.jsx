@@ -9,9 +9,14 @@ import pizza8 from './assets/pizza-8.jpg'
 import pizza7 from './assets/pizza-7.jpg'
 import './App.css'
 import Button from './components/Button';
-import Form from './components/Form';
+import Home from './components/Home';
 import ObjectState from './components/ObjectState';
-
+import StateExamples from './components/StateExamples';
+import {Routes, Route} from 'react-router-dom'
+import Fallback from './components/Fallback';
+import Products from './components/Products'
+import NewProducts from './components/NewProducts'
+import OldProducts from './components/OldProducts';
 // let btnStyle={
 //   borderRadius:8,
 //   color:'white',
@@ -39,10 +44,37 @@ const myArr =[ {
 function App() {
   const [count, setCount] = useState(0)
   return (
+    <>
+    <Navbar/>
+    <Routes>
+      <Route path='/' element={<Home/>} />
+      <Route path='login' element={<ObjectState/>} />
+      <Route path='*' element={<Fallback/>} />
+      
+      <Route path='products' element={<Products/>}>
+          <Route path='new' element={<NewProducts/>}/>
+          <Route path='old' element={<OldProducts/>}/>
+      </Route>
+      
+    </Routes>
     
-    <div className='coker'>
+    </>
+    
+   
+    
+    
+    
+    
+
+ 
+  )
+  
+}
+
+export default App
+{/* <div className='coker'>
        <Navbar  cartCount = {count} />
-      <Form/>
+      <Form/> */}
      
       
       {/* <Button count = {count} setCount={setCount}/> */}
@@ -60,14 +92,3 @@ function App() {
      
     {/* <Hero/>
     */}
-    
-    
-    
-    
-
-    </div>
-  )
-  
-}
-
-export default App

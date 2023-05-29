@@ -1,4 +1,5 @@
 import {AiOutlineShoppingCart} from 'react-icons/ai'
+import {Link} from 'react-router-dom'
 import './NavBar.css'
 const Navbar = ({cartCount}) => {
   return (
@@ -16,6 +17,7 @@ const Navbar = ({cartCount}) => {
           <AiOutlineShoppingCart size={30}/>
           <div id='cart-no'>{cartCount}</div>
         </div>
+        <Link to='login'>SignOut</Link>
     </nav>
   )
 }
