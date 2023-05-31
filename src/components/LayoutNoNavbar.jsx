@@ -1,13 +1,11 @@
 import React from 'react'
-import Navbar from './Navbar'
 import { Outlet } from 'react-router-dom'
-export default () => {
+const LayoutNoNavbar = () => {
   return (
     <>
-        <Navbar/>
-       <Outlet/>
-        
+    <Outlet />
     </>
   )
 }
 
+export default LayoutNoNavbar

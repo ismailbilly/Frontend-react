@@ -53,3 +53,31 @@ Passing objects as props
 Passing array as props
 Passing function as props
 Children Prop
+
+# In the 7th lecture, we will talk about
+react-router-DOM---navigate back and rendering content with Outlet component
+useRef
+Pure functions and side Effects
+useEffect hook
+call our first API
+
+PURE FUNCTION?
+Is a function without side effect. A function that gives same output for the same input all the time.
+
+PROS
+easy to debug
+clean code
+easy to test
+CONS
+Pure functions cannot 
+access DB,
+ make API call, 
+ modify DOM,
+store in browser
+
+SIDE EFFECTS?
+
+// useEffect(()=>{}) // runs on every re-render
+// useEffect(() => {}, []); //Run on  first render
+// useEffect(() => {}, [state,props....etc]); // runs when any of the array item changes
+//The second argument is called dependency array
