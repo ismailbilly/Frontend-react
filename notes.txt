@@ -71,8 +71,8 @@ easy to test
 CONS
 Pure functions cannot 
 access DB,
- make API call, 
- modify DOM,
+make API GET request, 
+modify DOM,
 store in browser
 
 SIDE EFFECTS?
