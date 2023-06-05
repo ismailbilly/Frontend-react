@@ -3,6 +3,7 @@ import HeroRight from "./HeroRight"
 import './Hero.css'
 
 const Hero = () => {
+  
   return (
     <section className="hero">
         <div className="container-hero">

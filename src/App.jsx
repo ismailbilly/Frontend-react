@@ -1,6 +1,7 @@
 import "bootstrap/dist/css/bootstrap.min.css";
-import { useState } from "react";
+import React, { useState, createContext } from "react";
 import "./App.css";
+
 // import Navbar from "./components/Navbar";
 // import Hero from "./components/Hero";
 // import Card from "./components/Card";
@@ -12,14 +13,17 @@ import "./App.css";
 // import Home from "./components/Home";
 // import ObjectState from "./components/ObjectState";
 // import StateExamples from "./components/StateExamples";
-// import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 // import Fallback from "./components/Fallback";
 // import Products from "./components/Products";
 // import NewProducts from "./components/NewProducts";
 // import OldProducts from "./components/OldProducts";
 // import LayoutNoNavbar from "./components/LayoutNoNavbar";
 // import Layout from "./components/Layout";
-import Something from "./components/intermediate/Something";
+// import Something from "./components/intermediate/Something";
+import Dashboard from "./components/advance/Dashboard";
+import Profile from "./components/advance/Profile";
+// import Fallback from "./components/basics/Fallback";
 // let btnStyle={
 //   borderRadius:8,
 //   color:'white',
@@ -43,13 +47,29 @@ import Something from "./components/intermediate/Something";
 //     myImage: pizza8,
 //   },
 // ];
-
+export const sakiContext = createContext();
 // parent component
 function App() {
-  const [count, setCount] = useState(0);
+
+  // const [count, setCount] = useState(0);
+  
+   const [title, setTitle] = useState("Home");
+   const [username, setUsername] = useState("Mr Olumide Gbeminiyi"); 
   return (
     <>
-      <Something />
+      <div className="app">
+        {/* <Routes>
+          <Route path="/" element={<Dashboard title={title} username={username} />}
+          />
+          <Route path="/profile" element={<Profile username={username} />} />
+        </Routes>  */}
+
+        <h1>Welcome, {username}</h1>
+        <sakiContext.Provider value={{ username, title}}>
+          <Dashboard />
+        </sakiContext.Provider>
+      </div>
+      {/* <Something /> */}
       {/* <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
@@ -122,3 +142,10 @@ export default App;
   /* <Hero/>
    */
 }
+
+//for parent
+//{createContext}  from React 
+// let sulaimanContext = createContext()
+// <sulaimanContext.Provider value={}>
+//   JSX OF PARENT COMPONENT
+// </sulaimanContext.Provider>

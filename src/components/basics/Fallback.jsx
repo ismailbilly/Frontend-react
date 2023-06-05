@@ -1,9 +1,10 @@
 import {useEffect, useState,useRef} from 'react'
-import Loader from './Loader'
+import Hero from './Hero'
+// import Loader from './Loader'
 
 const Fallback = () => {
   const [menus, setMenus] = useState([])
-  
+  const [name, setName] = useState('')
   const titleRef = useRef('')
   const postRef = useRef('');
 
@@ -31,48 +32,60 @@ const Fallback = () => {
 //  useEffect(() => {
 //    titleRef.current.focus();
 //  }, []);
-function handleFetch(event){
-  event.preventDefault();
+// function handleFetch(event){
+//   event.preventDefault();
   
-   let post = {
-     title: titleRef.current.value,
-     body: postRef.current.value,
-     userId: 1,
-   };
-  fetch("https://jsonplaceholder.typicode.com/posts", {
-    method: "POST",
-    body: JSON.stringify(post),
-    headers: {
-      "Content-type": "application/json; charset=UTF-8",
-    },
-  })
-    .then((response) => response.json())
-    .then((json) => {
-      console.log(json)
+//    let post = {
+//      title: titleRef.current.value,
+//      body: postRef.current.value,
+//      userId: 1,
+//    };
+//   fetch("https://jsonplaceholder.typicode.com/posts", {
+//     method: "POST",
+//     body: JSON.stringify(post),
+//     headers: {
+//       "Content-type": "application/json; charset=UTF-8",
+//     },
+//   })
+//     .then((response) => response.json())
+//     .then((json) => {
+//       console.log(json)
       
-    })
-      .catch((e) => console.log(e));
-  // fetch("https://jsonplaceholder.typicode.com/posts", {
-  //   method: "POST",
-  //   body: JSON.stringify({
-  //     title: "foo",
-  //     body: "bar",
-  //     userId: 1,
-  //   }),
-  //   headers: {
-  //     "Content-type": "application.json; charset=UTF-8",
-  //   },
-  // })
-  //   .then((res) => res.json())
-  //   .then((resp) => console.log(resp))
-  //  
+//     })
+//       .catch((e) => console.log(e));
+//   // fetch("https://jsonplaceholder.typicode.com/posts", {
+//   //   method: "POST",
+//   //   body: JSON.stringify({
+//   //     title: "foo",
+//   //     body: "bar",
+//   //     userId: 1,
+//   //   }),
+//   //   headers: {
+//   //     "Content-type": "application.json; charset=UTF-8",
+//   //   },
+//   // })
+//   //   .then((res) => res.json())
+//   //   .then((resp) => console.log(resp))
+//   //  
+// }
+function handleSubmit(e){
+  e.preventDefault()
+   
 }
+//  useEffect(() => {
+//    localStorage.setItem("name", name);
+//  }, [name]);
+
+useEffect(()=>{
+  localStorage.setItem('Username', name)
+  
+}, [name])
 
   return (
     <>
-      <form onSubmit={handleFetch}>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="title">Title</label>
-        <input type="text" name="title" id="title" ref={titleRef}/>
+        <input type="text" name="title" id="title" onChange={(e)=>{setName(e.target.value)}}/>
         <label htmlFor="body">Body</label>
         <input type="text" name="body" id="body" ref={postRef} />
         <input type="submit" value="Submit" />

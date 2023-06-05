@@ -1,4 +1,4 @@
-import burger from '../assets/burger-king-comp.jpg'
+import burger from '../../assets/burger-king-comp.jpg'
 
 const HeroLeft = () => {
   return (
