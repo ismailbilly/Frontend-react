@@ -81,3 +81,8 @@ SIDE EFFECTS?
 // useEffect(() => {}, []); //Run on  first render
 // useEffect(() => {}, [state,props....etc]); // runs when any of the array item changes
 //The second argument is called dependency array
+
+
+When to use useReducer hook
+When you update multiple states in a single function
+When we have a complex state, useReducer is the answer

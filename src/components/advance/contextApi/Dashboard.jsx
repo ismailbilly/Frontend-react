@@ -1,6 +1,6 @@
-import React from 'react'
-import Main from './Main'
-import Sidebar from './Sidebar'
+import React from "react";
+import Main from "./Main";
+import Sidebar from "./Sidebar";
 
 const Dashboard = ({ title, username }) => {
   return (
@@ -17,4 +17,4 @@ const Dashboard = ({ title, username }) => {
   );
 };
 
-export default Dashboard
+export default Dashboard;

@@ -1,8 +1,8 @@
-import {useContext} from 'react'
-import { sakiContext } from '../../App';
+import { useContext } from "react";
+import { sakiContext } from "../../../App";
 
 const Nav = () => {
-  const {username} = useContext(sakiContext)
+  const { username } = useContext(sakiContext);
   // const { username } = useContext(sakiContext);
   return (
     <div
@@ -29,6 +29,6 @@ const Nav = () => {
       <p>Hi, {username}</p>
     </div>
   );
-}
+};
 
-export default Nav
+export default Nav;

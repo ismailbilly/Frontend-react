@@ -21,8 +21,11 @@ import { Routes, Route } from "react-router-dom";
 // import LayoutNoNavbar from "./components/LayoutNoNavbar";
 // import Layout from "./components/Layout";
 // import Something from "./components/intermediate/Something";
-import Dashboard from "./components/advance/Dashboard";
-import Profile from "./components/advance/Profile";
+// import Dashboard from "./components/advance/contextApi/Dashboard";
+// import Profile from "./components/advance/contextApi/Profile";
+// import GetPost from "./components/intermediate/GetPost";
+import Counter from "./components/intermediate/Counter";
+import Counting from "./components/advance/useReducer/Counting";
 // import Fallback from "./components/basics/Fallback";
 // let btnStyle={
 //   borderRadius:8,
@@ -50,24 +53,24 @@ import Profile from "./components/advance/Profile";
 export const sakiContext = createContext();
 // parent component
 function App() {
-
   // const [count, setCount] = useState(0);
-  
-   const [title, setTitle] = useState("Home");
-   const [username, setUsername] = useState("Mr Olumide Gbeminiyi"); 
+
+  const [title, setTitle] = useState("Home");
+  const [username, setUsername] = useState("Mr Olumide Gbeminiyi");
   return (
     <>
       <div className="app">
+        <Counting/>
         {/* <Routes>
           <Route path="/" element={<Dashboard title={title} username={username} />}
           />
           <Route path="/profile" element={<Profile username={username} />} />
         </Routes>  */}
-
+        {/* 
         <h1>Welcome, {username}</h1>
-        <sakiContext.Provider value={{ username, title}}>
+        <sakiContext.Provider value={{ username, title }}>
           <Dashboard />
-        </sakiContext.Provider>
+        </sakiContext.Provider>*/}
       </div>
       {/* <Something /> */}
       {/* <Routes>
@@ -144,7 +147,7 @@ export default App;
 }
 
 //for parent
-//{createContext}  from React 
+//{createContext}  from React
 // let sulaimanContext = createContext()
 // <sulaimanContext.Provider value={}>
 //   JSX OF PARENT COMPONENT
